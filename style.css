@@ -1,0 +1,131 @@
+/* --- CONFIGURATION DES FONDS SOMBRES (MODÉRÉS) --- */
+body {
+    color: #f0f0f0; 
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Le filtre est NOIR à 70% pour bien voir la photo */
+#page-histoire {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('usine.jpg');
+}
+
+#page-premiere {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('premiere.jpg');
+}
+
+#page-derniere {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('derniere.webp');
+}
+
+/* --- L'EFFET FLOUTÉ (1px) --- */
+.conteneur {
+    padding: 30px 20px;
+    min-height: 100vh;
+    backdrop-filter: blur(1px); 
+}
+
+/* --- LES TITRES --- */
+h1 {
+    color: #e32636; /* Le VRAI Rouge Ferrari est de retour ! */
+    letter-spacing: 2px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    display: inline-block; 
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.9); /* Ombre un peu plus forte pour que le rouge ressorte bien sur le fond */
+}
+
+h2 {
+    color: #ffffff;
+    margin-top: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8); 
+}
+
+/* --- LES PARAGRAPHES --- */
+p {
+    color: #eeeeee;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 15px auto;
+    text-align: justify;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* --- LE MENU DE NAVIGATION --- */
+nav {
+    margin: 30px 0;
+    padding: 15px 30px;
+    background-color: rgba(30, 30, 30, 0.85); 
+    border-radius: 30px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block; 
+    transition: transform 0.3s ease, color 0.3s; 
+}
+
+nav a:hover {
+    color: #e32636; 
+    transform: scale(1.2); 
+}
+
+/* --- LES IMAGES --- */
+img {
+    max-width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border: 2px solid #555; 
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+    border-color: #e32636;
+}
+
+/* --- STYLE DE LA BULLE FERRARI --- */
+.conteneur-bulle-ferrari {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; 
+    margin-bottom: 30px; 
+}
+
+.bulle-ferrari {
+    display: inline-block;
+    background-color: #ff2800; 
+    color: #ffffff;
+    padding: 15px 30px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px; 
+    box-shadow: 0 4px 10px rgba(255, 40, 0, 0.4); 
+    transition: all 0.3s ease; 
+}
+
+.bulle-ferrari:hover {
+    background-color: #cc2000; 
+    transform: translateY(-3px) scale(1.02); 
+    box-shadow: 0 6px 15px rgba(255, 40, 0, 0.6);
+    color: #ffffff;
+}
