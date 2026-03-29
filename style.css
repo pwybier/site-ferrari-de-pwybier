@@ -1,4 +1,3 @@
-/* --- CONFIGURATION DES FONDS SOMBRES (MODÉRÉS) --- */
 body {
     color: #f0f0f0; 
     font-family: Verdana, sans-serif;
@@ -7,9 +6,13 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-color: #111;
 }
 
-/* Le filtre est NOIR à 70% pour bien voir la photo */
+#page-accueil {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('logo_ferrari.webp');
+}
+
 #page-histoire {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('usine.jpg');
 }
@@ -22,22 +25,20 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('derniere.webp');
 }
 
-/* --- L'EFFET FLOUTÉ (1px) --- */
 .conteneur {
     padding: 30px 20px;
     min-height: 100vh;
     backdrop-filter: blur(1px); 
 }
 
-/* --- LES TITRES --- */
 h1 {
-    color: #e32636; /* Le VRAI Rouge Ferrari est de retour ! */
+    color: #e32636;
     letter-spacing: 2px;
     border-bottom: 2px solid #555;
     padding-bottom: 15px;
     margin-bottom: 30px;
     display: inline-block; 
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.9); /* Ombre un peu plus forte pour que le rouge ressorte bien sur le fond */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
 }
 
 h2 {
@@ -46,7 +47,6 @@ h2 {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8); 
 }
 
-/* --- LES PARAGRAPHES --- */
 p {
     color: #eeeeee;
     line-height: 1.8;
@@ -60,7 +60,6 @@ p {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* --- LE MENU DE NAVIGATION --- */
 nav {
     margin: 30px 0;
     padding: 15px 30px;
@@ -85,7 +84,6 @@ nav a:hover {
     transform: scale(1.2); 
 }
 
-/* --- LES IMAGES --- */
 img {
     max-width: 80%;
     border-radius: 15px;
@@ -101,7 +99,6 @@ img:hover {
     border-color: #e32636;
 }
 
-/* --- STYLE DE LA BULLE FERRARI --- */
 .conteneur-bulle-ferrari {
     display: flex;
     justify-content: center;
@@ -128,4 +125,35 @@ img:hover {
     transform: translateY(-3px) scale(1.02); 
     box-shadow: 0 6px 15px rgba(255, 40, 0, 0.6);
     color: #ffffff;
+}
+
+.accueil-bulles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.bulle-rouge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: #ff2800;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(255, 40, 0, 0.5);
+    transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bulle-rouge:hover {
+    transform: scale(1.2);
+    background-color: #cc2000;
+    box-shadow: 0 15px 35px rgba(255, 40, 0, 0.7);
 }
